@@ -1,0 +1,144 @@
+// Content setting
+
+.content{
+    @include boxSizing;
+    min-height: 200px;
+    margin: 50px 0;
+    .container{
+        & > p{
+            text-align: center;
+        }
+    }
+}
+
+.list{
+    font-size: $fontsize-l;
+    margin: 0 auto;
+    margin-top: 35px;
+    li{
+        @include boxSizing;
+        height: 62px;
+        width: 650px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        padding: 22px 30px;
+        list-style: none;
+        background: $color-elv;
+        position: relative;
+        p{
+            position: absolute;            
+        }
+        &>div{
+            height: 62px;
+            width: 8px;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .bmiResult br{
+            display: none;
+        }
+    }
+    .listItem{
+        font-size: $fontsize-s;
+        margin: 0 20px 0 0;
+    }
+    @include ipad659(){
+        li{
+            width: 400px;
+            height: 100px;
+            & > div{
+                height: 100px;
+            }
+        }
+    }
+    @include phone413(){
+        li{
+            width: 290px;
+        }
+    }
+}
+.clearRecrode{
+    padding: 5px;
+    padding-bottom: 7px;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-twv;
+    border: 1.5px solid $color-twv;
+    border-radius: 5px;
+    margin-top: 30px; 
+    &:hover,&:active{
+        background: $color-master;
+        color: $color-sec;
+    }
+}
+
+
+.bmiPosition{
+    left: 120px;
+}
+.weightPosition{
+    left: 240px;
+}
+.heightPosition{
+    left: 380px;
+}
+.datePosition{
+    left: 550px;
+    span{
+        font-size: $fontsize-s;
+    }
+}
+@include ipad659(){
+    .bmiPosition{
+        left: 120px;
+    }
+    .datePosition{
+        left: 260px;
+    }
+    .weightPosition{
+        left: 120px;
+        top: 60px;
+    }
+    .heightPosition{
+        left: 260px;
+        top: 60px;
+    }
+}
+@include phone413{
+    .datePosition{
+        display: none;
+    }
+    .bmiPosition{
+        left: 30px;
+        top: 60px;
+    }
+    .weightPosition{
+        left: 150px;
+        top: 22px;
+    }
+    .heightPosition{
+        left: 150px;
+    }
+}
+
+.normalRange{
+    background: $color-fiv;
+    box-shadow: 2px 0 3px 0 rgba($color-fiv,0.29);
+}
+.underWeight{
+    background: $color-six;
+    box-shadow: 2px 0 3px 0 rgba($color-six,0.29);
+}
+.overWeight{
+    background: $color-sev;
+    box-shadow: 2px 0 3px 0 rgba($color-sev,0.29);
+}
+.obese1 , .obese2{
+    background: $color-eigh;
+    box-shadow: 2px 0 3px 0 rgba($color-eigh,0.29);
+}
+.obese3{
+    background: $color-ten;
+    box-shadow: 2px 0 3px 0 rgba($color-ten,0.29);
+}

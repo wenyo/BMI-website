@@ -1,0 +1,13 @@
+//Footer setting
+.footer{
+    @include boxSizing;
+    height: 90px;
+    background:  $color-master;
+    padding: 17px 0; 
+    .logoGray{
+        height: 55px;
+        width: 55px;
+        margin: 0 auto;
+        
+    }
+}

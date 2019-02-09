@@ -1,0 +1,11 @@
+@mixin ipad659 {
+    @media (max-width: 659px){
+        @content
+    }
+};
+
+@mixin phone413 {
+    @media (max-width: 413px){
+        @content
+    }
+};

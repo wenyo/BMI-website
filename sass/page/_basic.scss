@@ -1,0 +1,22 @@
+// Main css
+// Basic setting
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+.wrap{
+    background: $color-thir;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: $fontsize-m;
+    min-height: 600px;
+}
+.clear{
+    @include clear;
+}
+::placeholder{
+    color:  $color-thrtn;
+}
+
+h3{
+    font-size: $fontsize-xl;
+    text-align: center;
+}

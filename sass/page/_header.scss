@@ -1,0 +1,182 @@
+// Header setting
+
+.header{
+    @include boxSizing;
+    background: $color-sec;
+    height: 300px;
+    color: $color-master;
+    .container{
+        width: 700px;
+        margin: 0 auto;
+        padding-top: 80px; 
+        .clearNone{
+            clear: none;
+        }
+        @include ipad659(){
+            width: 300px;
+            padding-top: 20px;
+            position: relative;
+            .clearNone{
+                clear: both;
+            }
+        }
+    }
+}
+
+.logo{
+    background: url(../img/BMICLogo.png);
+    height: 117px;
+    width: 117px;
+    @include hide-text;
+    float: left;
+    margin: 30px 0;
+    @include ipad659(){
+        float: none;
+        background: url(../img/BMICLogo_5050.png);
+        height: 50px;
+        width: 50px;
+        margin: 0 auto;
+    }
+}
+
+.bmiCalculationForm{
+    float: left;
+    margin-left: 60px;
+    label,input{
+        display: block;
+        margin: 8px 0;
+    }
+    .weightClass,.heightClass{
+        margin-bottom: 20px;
+        padding: 5px 10px;
+        background: $color-four;
+        border: 2px solid $color-master;
+        border-radius: 10px;
+        height: 20px;
+        width: 230px;
+        font-size: $fontsize-l;
+        color: $color-thir;
+    }
+    @include ipad659(){
+        margin: 20px 0 0 0;
+        .weightClass,.heightClass{
+            width: 120px;
+        }
+    }
+}
+.checkBtnPosition{
+    position: relative;
+    float: left;
+    margin: 25px 20px;
+    .circle{
+        height: 30px;
+        width: 30px;
+        background: $color-fiv;
+        border-radius:15px;
+        position: absolute;
+        bottom: 10px;
+        z-index: 3;
+        right: 0; 
+        display: none;
+    }
+    .iconLoop{
+        background: url(../img/icons_loop.png);
+        width: 14px;
+        height: 19px;
+        position: absolute;
+        z-index: 100;
+        bottom: 15px;
+        right: 7px;
+        display: none;
+    }
+    .bmiSmall{
+        font-size: $fontsize-s;
+    }
+    @include ipad659(){
+        margin: 0;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+}
+
+.bmiCheckBtn{
+    @include pointer;
+    @include boxSizing;
+    text-align: center;
+    padding-top: 50px;
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    background: $color-master;
+    color: $color-sec;
+    border: none;
+    font-size: $fontsize-l;
+    letter-spacing: 2.5px;
+    &:hover{
+        box-shadow: 0 1px 4px 3px $color-master;
+    }
+    &:active{
+        background: $color-twv;
+        box-shadow: none;
+    }
+}
+
+.bmiNormalBtn{
+    border: 6px solid $color-fiv;
+    color: $color-fiv;
+    &:hover{
+        box-shadow: 0 1px 4px 3px $color-fiv;
+    }
+}
+.bmiOverWeightBtn{
+    border: 6px solid $color-sev;
+    color: $color-sev;
+    &:hover{
+        box-shadow: 0 1px 4px 3px $color-sev;
+    }
+}
+.bmiObese1Btn{
+    border: 6px solid $color-eigh;
+    color: $color-eigh;
+    &:hover{
+        box-shadow: 0 1px 4px 3px $color-eigh;
+    }
+}
+.bmiObese2Btn{
+    border: 6px solid $color-eigh;
+    color: $color-eigh;
+    &:hover{
+        box-shadow: 0 1px 4px 3px $color-eigh;
+    }
+}
+.bmiObese3Btn{
+    border: 6px solid $color-ten;
+    color: $color-ten;
+    &:hover{
+        box-shadow: 0 1px 4px 3px $color-ten;
+    }
+}
+.bmiUnderWeightBtn{
+    border: 6px solid $color-six;
+    color: $color-six;
+    &:hover{
+        box-shadow: 0 1px 4px 3px $color-six;
+    }
+}
+
+.bmiResultWord{
+    float: left;
+    line-height: 1.2;
+    font-size : $fontsize-xxl;
+    margin-top : 58px;
+    @include ipad659(){
+        float: none;
+        text-align: center;
+        margin: 0;
+        font-size: $fontsize-l;
+        br{
+            display: none;
+        }
+    }
+}
+

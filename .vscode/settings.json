@@ -1,0 +1,24 @@
+{
+    "liveSassCompile.settings.formats":[
+        // This is Default.
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css"
+        },
+        // You can add more
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css"
+        },
+    ],
+
+    "emmet.includeLanguages": {
+        "javascript": "html"
+      },
+      "files.associations": {
+        "*.js": "javascript"
+     },
+    "emmet.triggerExpansionOnTab":true,
+}
